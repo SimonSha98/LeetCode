@@ -1,5 +1,5 @@
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         dic = {};
         for s in strs:
             si = ''.join(sorted(s))
@@ -8,3 +8,6 @@ class Solution:
             else:
                 dic[si] = [s]
         return dic.values()
+
+test = Solution()
+print(test.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
